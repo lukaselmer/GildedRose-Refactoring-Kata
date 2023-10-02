@@ -53,7 +53,6 @@ export class BackstagePassItem extends Item {
         } else {
           item.quality = item.quality - item.quality
         }
-      } else {
       }
     }
   }
