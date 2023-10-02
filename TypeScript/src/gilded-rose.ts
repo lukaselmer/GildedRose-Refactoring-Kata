@@ -5,7 +5,7 @@ export class GildedRose {
   constructor(private items: Item[] = []) {}
 
   updateQuality() {
-    updateQualityFn(this.items)
+    this.items.forEach(updateItemQuality)
     return this.items
   }
 }
