@@ -17,8 +17,8 @@ abstract class Item {
 
   abstract updateQuality(): void
 
-  protected decreaseQualityToMin0() {
-    if (this.quality > 0) this.quality = this.quality - 1
+  protected decreaseQualityToMin0(by = 1) {
+    if (this.quality > 0) this.quality = this.quality - by
   }
 
   protected decreaseSellIn() {
