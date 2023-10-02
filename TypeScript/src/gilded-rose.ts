@@ -32,7 +32,7 @@ function updateItemQuality(item: Item) {
 }
 
 function decreaseQualityToMin0(item: Item) {
-  decreaseQuality(item)
+  item.quality = Math.max(0, item.quality - 1)
 }
 
 function expireBackstagePass(item: Item) {
