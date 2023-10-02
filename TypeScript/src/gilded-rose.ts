@@ -15,7 +15,7 @@ abstract class Item {
 export class NormalItem extends Item {
   updateQuality() {
     this.decreaseQualityToMin0()
-    this.sellIn = this.sellIn - 1
+    this.decreaseSellIn()
     if (this.sellIn < 0 && this.quality > 0) this.quality = this.quality - 1
   }
 }
@@ -24,7 +24,7 @@ export class AgedBrieItem extends Item {
   updateQuality() {
     if (this.quality < 50) this.quality = this.quality + 1
 
-    this.sellIn = this.sellIn - 1
+    this.decreaseSellIn()
     if (this.sellIn < 0 && this.quality < 50) this.quality = this.quality + 1
   }
 }
@@ -36,7 +36,7 @@ export class BackstagePassItem extends Item {
       if (this.sellIn < 11 && this.quality < 50) this.quality = this.quality + 1
       if (this.sellIn < 6 && this.quality < 50) this.quality = this.quality + 1
     }
-    this.sellIn = this.sellIn - 1
+    this.decreaseSellIn()
     if (this.sellIn < 0) this.quality = this.quality - this.quality
   }
 }
