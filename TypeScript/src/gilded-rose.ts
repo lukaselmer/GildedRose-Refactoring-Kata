@@ -20,6 +20,7 @@ function updateItemQuality(item: Item) {
   if (backstagePass(item)) increaseBackstageQuality(item)
 
   if (!legendary(item)) decreaseSellIn(item)
+
   if (expired(item) && backstagePass(item)) expireBackstagePass(item)
 
   if (normal(item)) decreaseQualityToMin0(item)
