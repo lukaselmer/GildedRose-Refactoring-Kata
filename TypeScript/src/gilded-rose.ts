@@ -1,25 +1,28 @@
-export class Item {
-  name: string;
-  sellIn: number;
-  quality: number;
-
-  constructor(name, sellIn, quality) {
-    this.name = name;
-    this.sellIn = sellIn;
-    this.quality = quality;
-  }
+abstract class Item {
+  constructor(public name: string, public sellIn: number, public quality: number) {}
 }
 
+export class NormalItem extends Item {}
+
+export class AgedBrieItem extends Item {}
+
+export class BackstagePassItem extends Item {}
+
+export class SulfurasItem extends Item {}
+
 export class GildedRose {
-  items: Array<Item>;
+  items: Array<Item>
 
   constructor(items = [] as Array<Item>) {
-    this.items = items;
+    this.items = items
   }
 
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
-      if (this.items[i].name != 'Aged Brie' && this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
+      if (
+        this.items[i].name != 'Aged Brie' &&
+        this.items[i].name != 'Backstage passes to a TAFKAL80ETC concert'
+      ) {
         if (this.items[i].quality > 0) {
           if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
             this.items[i].quality = this.items[i].quality - 1
@@ -43,7 +46,7 @@ export class GildedRose {
         }
       }
       if (this.items[i].name != 'Sulfuras, Hand of Ragnaros') {
-        this.items[i].sellIn = this.items[i].sellIn - 1;
+        this.items[i].sellIn = this.items[i].sellIn - 1
       }
       if (this.items[i].sellIn < 0) {
         if (this.items[i].name != 'Aged Brie') {
@@ -64,6 +67,6 @@ export class GildedRose {
       }
     }
 
-    return this.items;
+    return this.items
   }
 }
