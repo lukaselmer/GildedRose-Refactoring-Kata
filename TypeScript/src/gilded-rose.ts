@@ -1,7 +1,7 @@
 import { Item } from './item/Item'
 import { backstagePass, agedBrie, normal } from './item/itemTypes'
 import { handleBackstagePass } from './handlers/handleBackstagePass'
-import { handleBrie } from './handleBrie'
+import { handleBrie } from './handlers/handleBrie'
 import { handleNormalItem } from './handlers/handleNormalItem'
 
 export class GildedRose {
