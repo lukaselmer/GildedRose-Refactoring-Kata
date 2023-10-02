@@ -25,11 +25,9 @@ function updateItemQuality(item: Item) {
 
   if (expired(item)) {
     if (normal(item)) {
-      if (!backstagePass(item)) {
-        if (item.quality > 0) {
-          if (!legendary(item)) {
-            decreaseQuality(item)
-          }
+      if (item.quality > 0) {
+        if (!legendary(item)) {
+          decreaseQuality(item)
         }
       }
     }
