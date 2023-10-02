@@ -34,7 +34,7 @@ function updateItemQuality(item: Item) {
   if (agedBrie(item)) {
     increaseQualityToMax50(item)
     decreaseSellIn(item)
-    if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
+    if (expired(item)) increaseQualityToMax50(item)
     return
   }
 
