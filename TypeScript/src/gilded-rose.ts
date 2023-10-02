@@ -1,5 +1,9 @@
 import { Item } from './Item'
-import { decreaseQualityToMin0, increaseQualityToMax50, expireBackstagePass } from './utils/quality'
+import {
+  decreaseQualityToMin0,
+  increaseQualityToMax50,
+  expireBackstagePass as expire,
+} from './utils/quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
 import { decreaseSellIn, expired } from './utils/sellIn'
 
@@ -31,7 +35,7 @@ function handleBrie(item: Item) {
 function handleBackstagePass(item: Item) {
   increaseBackstageQuality(item)
   decreaseSellIn(item)
-  if (expired(item)) expireBackstagePass(item)
+  if (expired(item)) expire(item)
 }
 
 function increaseBackstageQuality(item: Item) {
