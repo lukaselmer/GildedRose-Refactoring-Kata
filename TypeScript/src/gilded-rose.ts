@@ -17,9 +17,7 @@ function updateQualityFn(items: Item[]) {
 
 function updateItemQuality(item: Item) {
   if (backstagePass(item)) {
-    increaseBackstageQuality(item)
-    decreaseSellIn(item)
-    if (expired(item)) expireBackstagePass(item)
+    handleBackstagePass(item)
   } else if (normal(item)) {
     decreaseQualityToMin0(item)
     decreaseSellIn(item)
@@ -29,6 +27,12 @@ function updateItemQuality(item: Item) {
     decreaseSellIn(item)
     if (expired(item)) increaseQualityToMax50(item)
   }
+}
+
+function handleBackstagePass(item: Item) {
+  increaseBackstageQuality(item)
+  decreaseSellIn(item)
+  if (expired(item)) expireBackstagePass(item)
 }
 
 function decreaseQualityToMin0(item: Item) {
