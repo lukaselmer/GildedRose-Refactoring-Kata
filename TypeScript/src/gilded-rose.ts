@@ -30,6 +30,7 @@ export class GildedRose {
   }
 
   private updateItemQuality(item: Item) {
+    item.updateQuality()
     if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
       if (item.quality > 0) {
         if (!(item instanceof SulfurasItem)) {
