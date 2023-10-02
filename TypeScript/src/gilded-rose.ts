@@ -60,15 +60,15 @@ export class BackstagePassItem extends Item {
     if (this.expired) this.expire()
   }
 
-  private get expiringSoon() {
+  protected get expiringSoon() {
     return this.sellIn < 11
   }
 
-  private get expiringVerySoon() {
+  protected get expiringVerySoon() {
     return this.sellIn < 6
   }
 
-  private expire() {
+  protected expire() {
     this.quality = 0
   }
 }
