@@ -17,6 +17,8 @@ function updateQualityFn(items: Item[]) {
 
 function updateItemQuality(item: Item) {
   if (agedBrie(item)) increaseQualityToMax50(item)
+  if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
+
   if (backstagePass(item)) increaseBackstageQuality(item)
 
   if (normal(item) && item.quality > 0) decreaseQuality(item)
@@ -36,8 +38,6 @@ function updateItemQuality(item: Item) {
   }
 
   if (expired(item) && backstagePass(item)) expireBackstagePass(item)
-
-  if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
 }
 
 function expireBackstagePass(item: Item) {
