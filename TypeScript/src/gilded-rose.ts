@@ -36,8 +36,8 @@ abstract class Item {
 
 export class NormalItem extends Item {
   updateQuality() {
-    this.decreaseQualityToMin0()
     this.decreaseSellIn()
+    this.decreaseQualityToMin0()
     if (this.expired) this.decreaseQualityToMin0()
   }
 }
