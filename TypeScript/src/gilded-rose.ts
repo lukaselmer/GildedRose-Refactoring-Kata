@@ -36,11 +36,15 @@ function updateItemQuality(item: Item) {
   }
 
   if (expired(item) && backstagePass(item)) {
-    item.quality = 0
+    expireBackstagePass(item)
   }
   if (expired(item) && agedBrie(item)) {
     increaseQualityToMax50(item)
   }
+}
+
+function expireBackstagePass(item: Item) {
+  item.quality = 0
 }
 
 function expired(item: Item) {
