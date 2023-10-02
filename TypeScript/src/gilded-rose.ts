@@ -1,9 +1,5 @@
 import { Item } from './Item'
-import {
-  decreaseQualityToMin0,
-  increaseQualityToMax50,
-  expireBackstagePass as expire,
-} from './utils/quality'
+import { decreaseQualityToMin0, increaseQualityToMax50, expire as expire } from './utils/quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
 import { decreaseSellIn, expired } from './utils/sellIn'
 

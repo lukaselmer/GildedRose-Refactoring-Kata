@@ -1,6 +1,6 @@
 import { Item } from '../Item'
 
-export function expireBackstagePass(item: Item) {
+export function expire(item: Item) {
   item.quality = 0
 }
 
