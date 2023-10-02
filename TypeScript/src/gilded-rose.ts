@@ -36,14 +36,14 @@ function handleBrie(item: Item) {
 }
 
 function handleBackstagePass(item: Item) {
-  increaseBackstageQuality(item)
   decreaseSellIn(item)
+  increaseBackstageQuality(item)
   if (expired(item)) expireBackstagePass(item)
 }
 
 function increaseBackstageQuality(item: Item) {
-  if (item.sellIn < 6) increaseQualityToMax50(item, 3)
-  else if (item.sellIn < 11) increaseQualityToMax50(item, 2)
+  if (item.sellIn <= 6) increaseQualityToMax50(item, 3)
+  else if (item.sellIn <= 11) increaseQualityToMax50(item, 2)
   else increaseQualityToMax50(item)
 }
 
