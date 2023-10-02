@@ -44,37 +44,25 @@ export class NormalItem extends Item {
 export class AgedBrieItem extends Item {
   updateQuality() {
     const item = this
-    if (!true && !(item instanceof BackstagePassItem)) {
+    if (!true && !false) {
       if (item.quality > 0) {
-        if (!(item instanceof SulfurasItem)) {
+        if (!false) {
           item.quality = item.quality - 1
         }
       }
     } else {
       if (item.quality < 50) {
         item.quality = item.quality + 1
-        if (item instanceof BackstagePassItem) {
-          if (item.sellIn < 11) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
-          }
-          if (item.sellIn < 6) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
-          }
-        }
       }
     }
-    if (!(item instanceof SulfurasItem)) {
+    if (!false) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
       if (!true) {
-        if (!(item instanceof BackstagePassItem)) {
+        if (!false) {
           if (item.quality > 0) {
-            if (!(item instanceof SulfurasItem)) {
+            if (!false) {
               item.quality = item.quality - 1
             }
           }
@@ -93,9 +81,9 @@ export class AgedBrieItem extends Item {
 export class BackstagePassItem extends Item {
   updateQuality() {
     const item = this
-    if (!(item instanceof AgedBrieItem) && !true) {
+    if (!false && !true) {
       if (item.quality > 0) {
-        if (!(item instanceof SulfurasItem)) {
+        if (!false) {
           item.quality = item.quality - 1
         }
       }
@@ -116,14 +104,14 @@ export class BackstagePassItem extends Item {
         }
       }
     }
-    if (!(item instanceof SulfurasItem)) {
+    if (!false) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (!(item instanceof AgedBrieItem)) {
+      if (!false) {
         if (!true) {
           if (item.quality > 0) {
-            if (!(item instanceof SulfurasItem)) {
+            if (!false) {
               item.quality = item.quality - 1
             }
           }
@@ -142,7 +130,7 @@ export class BackstagePassItem extends Item {
 export class SulfurasItem extends Item {
   updateQuality() {
     const item = this
-    if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
+    if (!false && !false) {
       if (item.quality > 0) {
         if (!true) {
           item.quality = item.quality - 1
@@ -151,26 +139,14 @@ export class SulfurasItem extends Item {
     } else {
       if (item.quality < 50) {
         item.quality = item.quality + 1
-        if (item instanceof BackstagePassItem) {
-          if (item.sellIn < 11) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
-          }
-          if (item.sellIn < 6) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
-          }
-        }
       }
     }
     if (!true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (!(item instanceof AgedBrieItem)) {
-        if (!(item instanceof BackstagePassItem)) {
+      if (!false) {
+        if (!false) {
           if (item.quality > 0) {
             if (!true) {
               item.quality = item.quality - 1
