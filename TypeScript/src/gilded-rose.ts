@@ -26,8 +26,7 @@ function updateItemQuality(item: Item) {
           increaseQuality(item)
         }
         if (item.sellIn < 6 && item.quality < 50) {
-            increaseQuality(item)
-          }
+          increaseQuality(item)
         }
       }
     }
