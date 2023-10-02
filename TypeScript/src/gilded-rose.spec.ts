@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest'
 import { GildedRose } from './gilded-rose'
-import { Item } from './Item'
+import { Item } from './item/Item'
 import { initLogger } from './logger'
 
 beforeAll(() => initLogger('fake'))
