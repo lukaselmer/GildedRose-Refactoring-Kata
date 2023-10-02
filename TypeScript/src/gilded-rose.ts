@@ -1,3 +1,17 @@
+export class GildedRose {
+  constructor(private items: Item[] = []) {}
+
+  updateQuality() {
+    this.items.forEach((item) => this.updateItemQuality(item))
+
+    return this.items
+  }
+
+  private updateItemQuality(item: Item) {
+    item.updateQuality()
+  }
+}
+
 abstract class Item {
   constructor(public name: string, public sellIn: number, public quality: number) {}
 
@@ -45,18 +59,4 @@ export class BackstagePassItem extends Item {
 
 export class SulfurasItem extends Item {
   updateQuality() {}
-}
-
-export class GildedRose {
-  constructor(private items: Item[] = []) {}
-
-  updateQuality() {
-    this.items.forEach((item) => this.updateItemQuality(item))
-
-    return this.items
-  }
-
-  private updateItemQuality(item: Item) {
-    item.updateQuality()
-  }
 }
