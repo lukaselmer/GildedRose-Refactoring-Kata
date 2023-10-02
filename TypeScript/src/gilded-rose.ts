@@ -37,8 +37,6 @@ function updateItemQuality(item: Item) {
     if (expired(item)) increaseQualityToMax50(item)
     return
   }
-
-  // if (!legendary(item)) decreaseSellIn(item)
 }
 
 function decreaseQualityToMin0(item: Item) {
