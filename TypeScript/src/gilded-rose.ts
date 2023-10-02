@@ -1,4 +1,4 @@
-import { backstagePass, agedBrie, normal } from './backstagePass'
+import { backstagePass, agedBrie, normal } from './itemTypes'
 
 export class Item {
   constructor(public name: string, public sellIn: number, public quality: number) {}
