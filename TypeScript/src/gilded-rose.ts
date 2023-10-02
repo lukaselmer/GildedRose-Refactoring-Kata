@@ -34,7 +34,7 @@ function updateItemQuality(item: Item) {
       } else {
         item.quality = item.quality - item.quality
       }
-    } else if (agedBrie(item) || backstagePass(item)) {
+    } else if (agedBrie(item)) {
       increaseQualityToMax50(item)
     }
   }
