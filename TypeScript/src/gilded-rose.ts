@@ -22,8 +22,8 @@ function updateItemQuality(item: Item) {
 }
 
 function handleNormalItem(item: Item) {
-  decreaseQualityToMin0(item)
   decreaseSellIn(item)
+  decreaseQualityToMin0(item)
   if (expired(item)) decreaseQualityToMin0(item)
 }
 
