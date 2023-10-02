@@ -2,7 +2,7 @@ import { GildedRose } from './gilded-rose'
 import { SulfurasItem } from './SulfurasItem'
 import { BackstagePassItem } from './BackstagePassItem'
 import { AgedBrieItem } from './AgedBrieItem'
-import { NormalItem } from './NormalItem'
+import { NormalItem } from './items/NormalItem'
 import { consoleLog } from './logger'
 
 export function goldenMasterTexTests(days: number) {
