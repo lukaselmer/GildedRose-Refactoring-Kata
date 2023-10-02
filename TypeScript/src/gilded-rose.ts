@@ -38,7 +38,7 @@ export class NormalItem extends Item {
   updateQuality() {
     this.decreaseQualityToMin0()
     this.decreaseSellIn()
-    if (this.sellIn < 0 && this.quality > 0) this.quality = this.quality - 1
+    if (this.expired() && this.quality > 0) this.quality = this.quality - 1
   }
 }
 
@@ -57,7 +57,7 @@ export class BackstagePassItem extends Item {
     if (this.sellIn < 6) this.increaseQualityToMax50()
 
     this.decreaseSellIn()
-    if (this.sellIn < 0) this.expire()
+    if (this.expired()) this.expire()
   }
 
   private expire() {
