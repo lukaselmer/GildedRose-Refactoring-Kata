@@ -15,11 +15,9 @@ export class NormalItem extends Item {
 export class AgedBrieItem extends Item {
   updateQuality() {
     const item = this
-    if (false) {
-    } else {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1
-      }
+
+    if (item.quality < 50) {
+      item.quality = item.quality + 1
     }
     if (true) {
       item.sellIn = item.sellIn - 1
