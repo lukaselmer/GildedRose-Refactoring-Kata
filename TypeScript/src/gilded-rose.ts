@@ -144,7 +144,7 @@ export class SulfurasItem extends Item {
     const item = this
     if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
       if (item.quality > 0) {
-        if (!(item instanceof SulfurasItem)) {
+        if (!true) {
           item.quality = item.quality - 1
         }
       }
@@ -165,14 +165,14 @@ export class SulfurasItem extends Item {
         }
       }
     }
-    if (!(item instanceof SulfurasItem)) {
+    if (!true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
       if (!(item instanceof AgedBrieItem)) {
         if (!(item instanceof BackstagePassItem)) {
           if (item.quality > 0) {
-            if (!(item instanceof SulfurasItem)) {
+            if (!true) {
               item.quality = item.quality - 1
             }
           }
