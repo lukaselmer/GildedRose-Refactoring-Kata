@@ -37,9 +37,13 @@ function updateItemQuality(item: Item) {
     }
   }
 
-  if (item.sellIn < 0 && agedBrie(item)) {
+  if (expired(item) && agedBrie(item)) {
     increaseQualityToMax50(item)
   }
+}
+
+function expired(item: Item) {
+  return item.sellIn < 0
 }
 
 function decreaseSellIn(item: Item) {
