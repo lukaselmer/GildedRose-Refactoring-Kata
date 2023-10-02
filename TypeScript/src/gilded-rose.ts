@@ -35,9 +35,7 @@ function updateItemQuality(item: Item) {
         item.quality = item.quality - item.quality
       }
     } else {
-      if (item.quality < 50) {
-        increaseQualityToMax50(item)
-      }
+      increaseQualityToMax50(item)
     }
   }
 }
