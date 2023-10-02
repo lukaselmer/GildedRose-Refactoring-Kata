@@ -21,9 +21,7 @@ function updateItemQuality(item: Item) {
 
   if (normal(item) && item.quality > 0) decreaseQuality(item)
 
-  if (!legendary(item)) {
-    item.sellIn = item.sellIn - 1
-  }
+  if (!legendary(item)) decreaseSellIn(item)
 
   if (item.sellIn < 0) {
     if (!agedBrie(item)) {
@@ -42,6 +40,10 @@ function updateItemQuality(item: Item) {
       }
     }
   }
+}
+
+function decreaseSellIn(item: Item) {
+  item.sellIn = item.sellIn - 1
 }
 
 function increaseBackstageQuality(item: Item) {
