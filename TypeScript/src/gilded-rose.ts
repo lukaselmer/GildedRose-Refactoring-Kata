@@ -36,6 +36,7 @@ function updateItemQuality(item: Item) {
       }
     }
   }
+
   if (item.sellIn < 0 && agedBrie(item)) {
     increaseQualityToMax50(item)
   }
