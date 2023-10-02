@@ -1,7 +1,7 @@
 import { Item } from './Item'
-import { decreaseQualityToMin0, increaseQualityToMax50, expire } from './utils/quality'
+import { decreaseQualityToMin0, increaseQualityToMax50, expire } from './item/quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
-import { decreaseSellIn, expired } from './utils/sellIn'
+import { decreaseSellIn, expired } from './item/sellIn'
 
 export class GildedRose {
   constructor(private items: Item[] = []) {}
