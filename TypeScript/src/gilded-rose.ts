@@ -24,8 +24,8 @@ function updateItemQuality(item: Item) {
 
   if (backstagePass(item)) {
     increaseQualityToMax50(item)
-    if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item)
-    if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item)
+    if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item, 2)
+    else if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item)
   }
 
   if (!legendary(item)) {
@@ -51,8 +51,8 @@ function updateItemQuality(item: Item) {
   }
 }
 
-function increaseQualityToMax50(item: Item) {
-  item.quality = Math.min(50, item.quality + 1)
+function increaseQualityToMax50(item: Item, increaseBy = 1) {
+  item.quality = Math.min(50, item.quality + increaseBy)
 }
 
 function increaseQuality(item: Item) {
