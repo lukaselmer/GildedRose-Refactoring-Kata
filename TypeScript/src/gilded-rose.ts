@@ -28,7 +28,7 @@ function handleNormalItem(item: Item) {
 }
 
 function decreaseQualityToMin0(item: Item, by = 1) {
-  item.quality = Math.max(0, item.quality - 1)
+  item.quality = Math.max(0, item.quality - by)
 }
 
 function handleBrie(item: Item) {
