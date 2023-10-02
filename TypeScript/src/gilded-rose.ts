@@ -29,8 +29,7 @@ function handleNormalItem(item: Item) {
 
 function handleBrie(item: Item) {
   decreaseSellIn(item)
-  increaseQualityToMax50(item)
-  if (expired(item)) increaseQualityToMax50(item)
+  increaseQualityToMax50(item, expired(item) ? 2 : 1)
 }
 
 function handleBackstagePass(item: Item) {
