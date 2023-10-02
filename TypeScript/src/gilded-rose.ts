@@ -23,9 +23,8 @@ function updateItemQuality(item: Item) {
   }
 
   if (backstagePass(item)) {
-    increaseQualityToMax50(item)
-    if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item, 2)
-    else if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item)
+    if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item, 3)
+    else if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item, 2)
   }
 
   if (!legendary(item)) {
