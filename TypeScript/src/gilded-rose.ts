@@ -1,5 +1,5 @@
-import { Item } from './itemUtils/Item'
-import { backstagePass, agedBrie, normal } from './itemUtils/itemTypes'
+import { Item } from './items/itemUtils/Item'
+import { backstagePass, agedBrie, normal } from './items/itemUtils/itemTypes'
 import { handleBackstagePass } from './itemHandlers/handleBackstagePass'
 import { handleBrie } from './itemHandlers/handleBrie'
 import { handleNormalItem } from './itemHandlers/handleNormalItem'
