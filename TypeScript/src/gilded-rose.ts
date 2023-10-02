@@ -20,13 +20,13 @@ function updateItemQuality(item: Item) {
 
   if (agedBrie(item) || backstagePass(item)) {
     if (item.quality < 50) {
-      increaseQuality(item)
+      increaseQualityToMax50(item)
       if (backstagePass(item) && item.quality < 50) {
         if (item.sellIn < 11) {
-          increaseQuality(item)
+          increaseQualityToMax50(item)
         }
         if (item.sellIn < 6) {
-          increaseQuality(item)
+          increaseQualityToMax50(item)
         }
       }
     }
@@ -53,6 +53,10 @@ function updateItemQuality(item: Item) {
       }
     }
   }
+}
+
+function increaseQualityToMax50(item: Item) {
+  item.quality = item.quality + 1
 }
 
 function increaseQuality(item: Item) {
