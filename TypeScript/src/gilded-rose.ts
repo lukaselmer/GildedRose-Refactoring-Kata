@@ -1,6 +1,6 @@
 import { Item } from './item/Item'
 import { decreaseQualityToMin0, increaseQualityToMax50, expire } from './item/quality'
-import { backstagePass, agedBrie, normal } from './itemTypes'
+import { backstagePass, agedBrie, normal } from './item/itemTypes'
 import { decreaseSellIn, expired } from './item/sellIn'
 
 export class GildedRose {
