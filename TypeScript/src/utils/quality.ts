@@ -1,4 +1,4 @@
-import { Item } from './Item'
+import { Item } from '../Item'
 
 export function decreaseQualityToMin0(item: Item, by = 1) {
   item.quality = Math.max(0, item.quality - by)
