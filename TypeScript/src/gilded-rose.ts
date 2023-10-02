@@ -38,7 +38,7 @@ function updateItemQuality(item: Item) {
     return
   }
 
-  if (!legendary(item)) decreaseSellIn(item)
+  // if (!legendary(item)) decreaseSellIn(item)
 }
 
 function decreaseQualityToMin0(item: Item) {
