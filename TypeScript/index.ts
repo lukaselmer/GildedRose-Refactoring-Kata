@@ -1,4 +1,4 @@
-import { goldenMasterTexTests } from './src/golden-master-text-test'
+import { goldenMasterTexTests } from './src/handlers/golden-master-text-test'
 import { initLogger } from './src/logger'
 
 initLogger('real')

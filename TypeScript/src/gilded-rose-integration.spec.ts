@@ -1,6 +1,6 @@
 import { beforeEach, beforeAll, describe, expect, it } from 'vitest'
 import { discardLogs, fakeLogs, initLogger } from './logger'
-import { goldenMasterTexTests } from './golden-master-text-test'
+import { goldenMasterTexTests } from './handlers/golden-master-text-test'
 
 beforeAll(() => initLogger('fake'))
 beforeEach(discardLogs)
