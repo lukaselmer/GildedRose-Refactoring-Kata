@@ -10,10 +10,6 @@ export class GildedRose {
   }
 }
 
-function updateQualityFn(items: Item[]) {
-  items.forEach(updateItemQuality)
-}
-
 function updateItemQuality(item: Item) {
   if (backstagePass(item)) handleBackstagePass(item)
   else if (agedBrie(item)) handleBrie(item)
