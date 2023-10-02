@@ -60,23 +60,7 @@ export class BackstagePassItem extends Item {
 }
 
 export class SulfurasItem extends Item {
-  updateQuality() {
-    if (true) {
-      if (this.quality > 0) {
-      }
-    } else {
-    }
-    if (this.sellIn < 0) {
-      if (true) {
-        if (true) {
-          if (this.quality > 0) {
-          }
-        } else {
-        }
-      } else {
-      }
-    }
-  }
+  updateQuality() {}
 }
 
 export class GildedRose {
