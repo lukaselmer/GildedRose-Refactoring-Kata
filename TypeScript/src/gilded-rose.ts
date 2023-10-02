@@ -17,7 +17,7 @@ function updateQualityFn(items: Item[]) {
 
     if (!agedBrie(item) && !backstagePass(item)) {
       if (item.quality > 0) {
-        if (item.name != 'Sulfuras, Hand of Ragnaros') {
+        if (!legendary(item)) {
           item.quality = item.quality - 1
         }
       }
@@ -60,8 +60,9 @@ function updateQualityFn(items: Item[]) {
     }
   }
 }
-function legendary(item: Item) {
-  return item.name === 'Sulfuras, Hand of Ragnaros'
+
+function specialItem(item: Item) {
+  return agedBrie(item) || backstagePass(item) || legendary(item)
 }
 
 function backstagePass(item: Item) {
@@ -70,4 +71,8 @@ function backstagePass(item: Item) {
 
 function agedBrie(item: Item) {
   return item.name === 'Aged Brie'
+}
+
+function legendary(item: Item) {
+  return item.name === 'Sulfuras, Hand of Ragnaros'
 }
