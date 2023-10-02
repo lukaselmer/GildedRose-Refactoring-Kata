@@ -44,7 +44,7 @@ function increaseBackstageQuality(item: Item) {
   else increaseQualityToMax50(item)
 }
 
-function decreaseQualityToMin0(item: Item) {
+function decreaseQualityToMin0(item: Item, by = 1) {
   item.quality = Math.max(0, item.quality - 1)
 }
 
@@ -60,8 +60,8 @@ function decreaseSellIn(item: Item) {
   item.sellIn = item.sellIn - 1
 }
 
-function increaseQualityToMax50(item: Item, increaseBy = 1) {
-  item.quality = Math.min(50, item.quality + increaseBy)
+function increaseQualityToMax50(item: Item, by = 1) {
+  item.quality = Math.min(50, item.quality + by)
 }
 
 function normal(item: Item) {
