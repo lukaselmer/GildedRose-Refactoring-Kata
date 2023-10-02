@@ -12,10 +12,7 @@ export class GildedRose {
 }
 
 function updateQualityFn(items: Item[]) {
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i]
-    updateItemQuality(item)
-  }
+  items.forEach(updateItemQuality)
 }
 
 function updateItemQuality(item: Item) {
