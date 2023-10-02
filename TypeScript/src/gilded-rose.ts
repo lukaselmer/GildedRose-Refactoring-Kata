@@ -28,8 +28,8 @@ function handleNormalItem(item: Item) {
 }
 
 function handleBrie(item: Item) {
-  increaseQualityToMax50(item)
   decreaseSellIn(item)
+  increaseQualityToMax50(item)
   if (expired(item)) increaseQualityToMax50(item)
 }
 
