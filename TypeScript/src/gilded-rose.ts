@@ -7,7 +7,7 @@ abstract class Item {
 export class NormalItem extends Item {
   updateQuality() {
     const item = this
-    if (true && true) {
+    if (true) {
       if (item.quality > 0) {
         if (true) {
           item.quality = item.quality - 1
@@ -37,7 +37,7 @@ export class NormalItem extends Item {
 export class AgedBrieItem extends Item {
   updateQuality() {
     const item = this
-    if (!true && true) {
+    if (!true) {
       if (item.quality > 0) {
         if (true) {
           item.quality = item.quality - 1
@@ -119,7 +119,7 @@ export class BackstagePassItem extends Item {
 export class SulfurasItem extends Item {
   updateQuality() {
     const item = this
-    if (true && true) {
+    if (true) {
       if (item.quality > 0) {
         if (!true) {
           item.quality = item.quality - 1
