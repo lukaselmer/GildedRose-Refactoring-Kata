@@ -18,7 +18,7 @@ export class GildedRose {
       const item = this.items[i]
       if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
         if (item.quality > 0) {
-          if (item.name != 'Sulfuras, Hand of Ragnaros') {
+          if (!(item instanceof SulfurasItem)) {
             item.quality = item.quality - 1
           }
         }
