@@ -23,9 +23,7 @@ function updateItemQuality(item: Item) {
   }
 
   if (backstagePass(item)) {
-    if (item.sellIn < 6) increaseQualityToMax50(item, 3)
-    else if (item.sellIn < 11) increaseQualityToMax50(item, 2)
-    else increaseQualityToMax50(item)
+    increaseBackstageQuality(item)
   }
 
   if (!legendary(item)) {
@@ -49,6 +47,12 @@ function updateItemQuality(item: Item) {
       }
     }
   }
+}
+
+function increaseBackstageQuality(item: Item) {
+  if (item.sellIn < 6) increaseQualityToMax50(item, 3)
+  else if (item.sellIn < 11) increaseQualityToMax50(item, 2)
+  else increaseQualityToMax50(item)
 }
 
 function increaseQualityToMax50(item: Item, increaseBy = 1) {
