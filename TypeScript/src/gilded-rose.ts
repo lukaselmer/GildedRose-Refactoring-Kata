@@ -1,6 +1,7 @@
 import { Item } from './Item'
 import { decreaseQualityToMin0, increaseQualityToMax50, expireBackstagePass } from './utils/quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
+import { decreaseSellIn, expired } from './decreaseSellIn'
 
 export class GildedRose {
   constructor(private items: Item[] = []) {}
@@ -37,12 +38,4 @@ function increaseBackstageQuality(item: Item) {
   if (item.sellIn < 6) increaseQualityToMax50(item, 3)
   else if (item.sellIn < 11) increaseQualityToMax50(item, 2)
   else increaseQualityToMax50(item)
-}
-
-function expired(item: Item) {
-  return item.sellIn < 0
-}
-
-function decreaseSellIn(item: Item) {
-  item.sellIn = item.sellIn - 1
 }
