@@ -35,8 +35,8 @@ function updateItemQuality(item: Item) {
     }
   }
 
-  if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
   if (expired(item) && backstagePass(item)) expireBackstagePass(item)
+  if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
 }
 
 function expireBackstagePass(item: Item) {
