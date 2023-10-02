@@ -24,11 +24,15 @@ function updateItemQuality(item: Item) {
   if (!legendary(item)) decreaseSellIn(item)
 
   if (expired(item) && normal(item) && item.quality > 0) {
-    decreaseQuality(item)
+    decreaseQualityToMin0(item)
   }
 
   if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
   if (expired(item) && backstagePass(item)) expireBackstagePass(item)
+}
+
+function decreaseQualityToMin0(item: Item) {
+  decreaseQuality(item)
 }
 
 function expireBackstagePass(item: Item) {
