@@ -43,7 +43,7 @@ export class GildedRose {
         item.sellIn = item.sellIn - 1
       }
       if (item.sellIn < 0) {
-        if (item.name != 'Aged Brie') {
+        if (!(item instanceof AgedBrieItem)) {
           if (!(item instanceof BackstagePassItem)) {
             if (item.quality > 0) {
               if (!(item instanceof SulfurasItem)) {
