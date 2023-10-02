@@ -16,13 +16,9 @@ function updateQualityFn(items: Item[]) {
 }
 
 function updateItemQuality(item: Item) {
-  if (backstagePass(item)) {
-    handleBackstagePass(item)
-  } else if (agedBrie(item)) {
-    handleBrie(item)
-  } else if (normal(item)) {
-    handleNormalItem(item)
-  }
+  if (backstagePass(item)) handleBackstagePass(item)
+  else if (agedBrie(item)) handleBrie(item)
+  else if (normal(item)) handleNormalItem(item)
 }
 
 function handleNormalItem(item: Item) {
