@@ -60,12 +60,12 @@ export class BackstagePassItem extends Item {
     if (this.expired) this.expire()
   }
 
-  private expiringVerySoon() {
-    return this.sellIn < 6
-  }
-
   private expiringSoon() {
     return this.sellIn < 11
+  }
+
+  private expiringVerySoon() {
+    return this.sellIn < 6
   }
 
   private expire() {
