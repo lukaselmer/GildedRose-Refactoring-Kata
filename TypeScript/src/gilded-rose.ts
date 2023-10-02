@@ -28,7 +28,7 @@ export class AgedBrieItem extends Item {
     if (this.sellIn < 0 && this.quality < 50) this.quality = this.quality + 1
   }
 
-  private increaseQualityToMax50() {
+  protected increaseQualityToMax50() {
     if (this.quality < 50) this.quality = this.quality + 1
   }
 }
