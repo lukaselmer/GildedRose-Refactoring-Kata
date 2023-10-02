@@ -31,7 +31,7 @@ function updateItemQuality(item: Item) {
             decreaseQuality(item)
           }
         }
-      } else {
+      } else if (backstagePass(item)) {
         item.quality = item.quality - item.quality
       }
     }
