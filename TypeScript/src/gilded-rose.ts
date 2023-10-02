@@ -28,6 +28,9 @@ abstract class Item {
   protected increaseQualityToMax50() {
     if (this.quality < 50) this.quality = this.quality + 1
   }
+  protected expired() {
+    return this.sellIn < 0
+  }
 }
 
 export class NormalItem extends Item {
