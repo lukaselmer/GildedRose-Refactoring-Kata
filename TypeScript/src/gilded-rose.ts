@@ -11,11 +11,7 @@ export class BackstagePassItem extends Item {}
 export class SulfurasItem extends Item {}
 
 export class GildedRose {
-  items: Array<Item>
-
-  constructor(items = [] as Array<Item>) {
-    this.items = items
-  }
+  constructor(private items: Item[] = []) {}
 
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
