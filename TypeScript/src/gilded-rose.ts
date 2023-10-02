@@ -25,9 +25,9 @@ function updateItemQuality(item: Item) {
   }
   if (agedBrie(item)) increaseQualityToMax50(item)
 
+  if (normal(item)) decreaseQualityToMin0(item)
   if (!legendary(item)) decreaseSellIn(item)
 
-  if (normal(item)) decreaseQualityToMin0(item)
   if (expired(item) && normal(item)) decreaseQualityToMin0(item)
 
   if (expired(item) && agedBrie(item)) increaseQualityToMax50(item)
