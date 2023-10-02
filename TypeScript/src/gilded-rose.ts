@@ -63,10 +63,10 @@ function updateQualityFn(items: Item[]) {
 }
 
 function normal(item: Item) {
-  return !specialItem(item)
+  return !special(item)
 }
 
-function specialItem(item: Item) {
+function special(item: Item) {
   return agedBrie(item) || backstagePass(item) || legendary(item)
 }
 
