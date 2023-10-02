@@ -34,11 +34,9 @@ export class AgedBrieItem extends Item {
 
 export class BackstagePassItem extends Item {
   updateQuality() {
-    if (this.quality < 50) {
-      this.increaseQualityToMax50()
-      if (this.sellIn < 11) this.increaseQualityToMax50()
-      if (this.sellIn < 6) this.increaseQualityToMax50()
-    }
+    this.increaseQualityToMax50()
+    if (this.sellIn < 11) this.increaseQualityToMax50()
+    if (this.sellIn < 6) this.increaseQualityToMax50()
     this.decreaseSellIn()
     if (this.sellIn < 0) this.quality = this.quality - this.quality
   }
