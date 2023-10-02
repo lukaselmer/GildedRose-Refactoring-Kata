@@ -15,7 +15,7 @@ function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
 
-    if (normal(item) && item.quality > 0) item.quality = item.quality - 1
+    if (normal(item) && item.quality > 0) decreaseQuality(item)
 
     if (agedBrie(item) || backstagePass(item)) {
       if (item.quality < 50) {
@@ -56,6 +56,10 @@ function updateQualityFn(items: Item[]) {
       }
     }
   }
+}
+
+function decreaseQuality(item: Item) {
+  item.quality = item.quality - 1
 }
 
 function normal(item: Item) {
