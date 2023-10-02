@@ -1,6 +1,6 @@
-import { Item } from '../item/Item'
-import { decreaseQualityToMin0 } from '../item/quality'
-import { decreaseSellIn, expired } from '../item/sellIn'
+import { Item } from '../itemUtils/Item'
+import { decreaseQualityToMin0 } from '../itemUtils/quality'
+import { decreaseSellIn, expired } from '../itemUtils/sellIn'
 
 export function handleNormalItem(item: Item): void {
   decreaseSellIn(item)

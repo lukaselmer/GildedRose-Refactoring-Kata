@@ -1,6 +1,6 @@
-import { Item } from '../item/Item'
-import { increaseQualityToMax50 } from '../item/quality'
-import { decreaseSellIn, expired } from '../item/sellIn'
+import { Item } from '../itemUtils/Item'
+import { increaseQualityToMax50 } from '../itemUtils/quality'
+import { decreaseSellIn, expired } from '../itemUtils/sellIn'
 
 export function handleBrie(item: Item) {
   decreaseSellIn(item)

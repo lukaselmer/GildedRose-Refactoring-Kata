@@ -1,6 +1,6 @@
-import { Item } from '../item/Item'
-import { increaseQualityToMax50, expire } from '../item/quality'
-import { decreaseSellIn, expired } from '../item/sellIn'
+import { Item } from '../itemUtils/Item'
+import { increaseQualityToMax50, expire } from '../itemUtils/quality'
+import { decreaseSellIn, expired } from '../itemUtils/sellIn'
 
 export function handleBackstagePass(item: Item) {
   increaseBackstageQuality(item)
