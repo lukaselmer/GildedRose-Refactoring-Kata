@@ -20,7 +20,6 @@ function updateItemQuality(item: Item) {
     increaseBackstageQuality(item)
     decreaseSellIn(item)
     if (expired(item)) expireBackstagePass(item)
-
     return
   }
 
