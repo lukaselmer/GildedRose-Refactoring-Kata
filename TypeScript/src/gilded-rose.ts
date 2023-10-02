@@ -16,8 +16,8 @@ function updateQualityFn(items: Item[]) {
     const item = items[i]
 
     if (!agedBrie(item) && !backstagePass(item)) {
-      if (item.quality > 0) {
-        if (!legendary(item)) {
+      if (!legendary(item)) {
+        if (item.quality > 0) {
           item.quality = item.quality - 1
         }
       }
@@ -59,6 +59,10 @@ function updateQualityFn(items: Item[]) {
       }
     }
   }
+}
+
+function normalItem(item: Item) {
+  return !specialItem(item)
 }
 
 function specialItem(item: Item) {
