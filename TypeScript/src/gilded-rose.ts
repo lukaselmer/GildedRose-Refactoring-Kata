@@ -15,13 +15,15 @@ function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
 
-    if (!agedBrie(item) && !backstagePass(item)) {
+    if (!agedBrie(item) && !backstagePass(item) && !legendary(item)) {
       if (!legendary(item)) {
         if (item.quality > 0) {
           item.quality = item.quality - 1
         }
       }
-    } else {
+    }
+
+    if (agedBrie(item) || backstagePass(item)) {
       if (item.quality < 50) {
         item.quality = item.quality + 1
         if (backstagePass(item)) {
@@ -38,6 +40,7 @@ function updateQualityFn(items: Item[]) {
         }
       }
     }
+
     if (!legendary(item)) {
       item.sellIn = item.sellIn - 1
     }
