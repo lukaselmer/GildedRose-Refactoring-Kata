@@ -52,7 +52,7 @@ function updateItemQuality(item: Item) {
 }
 
 function increaseQualityToMax50(item: Item, increaseBy = 1) {
-  item.quality = Math.min(50, item.quality + 1)
+  item.quality = Math.min(50, item.quality + increaseBy)
 }
 
 function increaseQuality(item: Item) {
