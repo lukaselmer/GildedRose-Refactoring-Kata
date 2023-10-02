@@ -16,14 +16,8 @@ export class NormalItem extends Item {
     }
     item.sellIn = item.sellIn - 1
     if (item.sellIn < 0) {
-      if (true) {
-        if (true) {
-          if (item.quality > 0) {
-            if (true) {
-              item.quality = item.quality - 1
-            }
-          }
-        }
+      if (item.quality > 0) {
+        item.quality = item.quality - 1
       }
     }
   }
