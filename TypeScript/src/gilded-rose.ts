@@ -1,14 +1,24 @@
 abstract class Item {
   constructor(public name: string, public sellIn: number, public quality: number) {}
+
+  abstract updateQuality(): void
 }
 
-export class NormalItem extends Item {}
+export class NormalItem extends Item {
+  updateQuality() {}
+}
 
-export class AgedBrieItem extends Item {}
+export class AgedBrieItem extends Item {
+  updateQuality() {}
+}
 
-export class BackstagePassItem extends Item {}
+export class BackstagePassItem extends Item {
+  updateQuality() {}
+}
 
-export class SulfurasItem extends Item {}
+export class SulfurasItem extends Item {
+  updateQuality() {}
+}
 
 export class GildedRose {
   constructor(private items: Item[] = []) {}
