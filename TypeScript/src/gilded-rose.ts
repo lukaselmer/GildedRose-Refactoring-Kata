@@ -15,7 +15,7 @@ function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
 
-    if (item.name != 'Aged Brie' && item.name != 'Backstage passes to a TAFKAL80ETC concert') {
+    if (!agedBrie(item) && !backstagePass(item)) {
       if (item.quality > 0) {
         if (item.name != 'Sulfuras, Hand of Ragnaros') {
           item.quality = item.quality - 1
@@ -42,7 +42,7 @@ function updateQualityFn(items: Item[]) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (item.name != 'Aged Brie') {
+      if (!agedBrie(item)) {
         if (item.name != 'Backstage passes to a TAFKAL80ETC concert') {
           if (item.quality > 0) {
             if (item.name != 'Sulfuras, Hand of Ragnaros') {
@@ -59,4 +59,11 @@ function updateQualityFn(items: Item[]) {
       }
     }
   }
+}
+function backstagePass(item: Item) {
+  return item.name === 'Backstage passes to a TAFKAL80ETC concert'
+}
+
+function agedBrie(item: Item) {
+  return item.name === 'Aged Brie'
 }
