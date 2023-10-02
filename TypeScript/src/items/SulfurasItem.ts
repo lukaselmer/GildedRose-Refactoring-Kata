@@ -1,4 +1,4 @@
-import { Item } from './items/Item'
+import { Item } from './Item'
 
 export class SulfurasItem extends Item {
   updateQuality() {}
