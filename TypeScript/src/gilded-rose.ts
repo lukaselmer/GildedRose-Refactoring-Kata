@@ -42,7 +42,7 @@ function handleBackstagePass(item: Item) {
 }
 
 function increaseBackstageQuality(item: Item) {
-  if (item.sellIn <= 6) increaseQualityToMax50(item, 3)
+  if (item.sellIn < 6) increaseQualityToMax50(item, 3)
   else if (item.sellIn < 11) increaseQualityToMax50(item, 2)
   else increaseQualityToMax50(item)
 }
