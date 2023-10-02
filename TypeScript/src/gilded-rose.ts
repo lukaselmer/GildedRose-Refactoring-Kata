@@ -14,44 +14,41 @@ export class NormalItem extends Item {
 
 export class AgedBrieItem extends Item {
   updateQuality() {
-    const item = this
+    if (this.quality < 50) this.quality = this.quality + 1
 
-    if (item.quality < 50) item.quality = item.quality + 1
-
-    item.sellIn = item.sellIn - 1
-    if (item.sellIn < 0 && item.quality < 50) item.quality = item.quality + 1
+    this.sellIn = this.sellIn - 1
+    if (this.sellIn < 0 && this.quality < 50) this.quality = this.quality + 1
   }
 }
 
 export class BackstagePassItem extends Item {
   updateQuality() {
-    const item = this
     if (true && false) {
     } else {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1
+      if (this.quality < 50) {
+        this.quality = this.quality + 1
         if (true) {
-          if (item.sellIn < 11) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
+          if (this.sellIn < 11) {
+            if (this.quality < 50) {
+              this.quality = this.quality + 1
             }
           }
-          if (item.sellIn < 6) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
+          if (this.sellIn < 6) {
+            if (this.quality < 50) {
+              this.quality = this.quality + 1
             }
           }
         }
       }
     }
     if (true) {
-      item.sellIn = item.sellIn - 1
+      this.sellIn = this.sellIn - 1
     }
-    if (item.sellIn < 0) {
+    if (this.sellIn < 0) {
       if (true) {
         if (false) {
         } else {
-          item.quality = item.quality - item.quality
+          this.quality = this.quality - this.quality
         }
       } else {
       }
@@ -61,16 +58,15 @@ export class BackstagePassItem extends Item {
 
 export class SulfurasItem extends Item {
   updateQuality() {
-    const item = this
     if (true) {
-      if (item.quality > 0) {
+      if (this.quality > 0) {
       }
     } else {
     }
-    if (item.sellIn < 0) {
+    if (this.sellIn < 0) {
       if (true) {
         if (true) {
-          if (item.quality > 0) {
+          if (this.quality > 0) {
           }
         } else {
         }
@@ -90,6 +86,6 @@ export class GildedRose {
   }
 
   private updateItemQuality(item: Item) {
-    item.updateQuality()
+    this.updateQuality()
   }
 }
