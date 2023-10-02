@@ -35,10 +35,9 @@ function updateItemQuality(item: Item) {
         item.quality = item.quality - item.quality
       }
     }
-
-    if (item.sellIn < 0 && agedBrie(item)) {
-      increaseQualityToMax50(item)
-    }
+  }
+  if (item.sellIn < 0 && agedBrie(item)) {
+    increaseQualityToMax50(item)
   }
 }
 
