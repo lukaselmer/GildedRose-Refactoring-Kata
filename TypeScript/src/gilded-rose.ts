@@ -19,7 +19,7 @@ function updateItemQuality(item: Item) {
   if (normal(item) && item.quality > 0) decreaseQuality(item)
 
   if (agedBrie(item) || backstagePass(item)) {
-    if (item.quality < 50) {
+    if (true) {
       increaseQualityToMax50(item)
       if (backstagePass(item) && item.quality < 50) {
         if (item.sellIn < 11) {
