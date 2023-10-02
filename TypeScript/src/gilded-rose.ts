@@ -1,4 +1,9 @@
 import { Item } from './Item'
+import {
+  decreaseQualityToMin0,
+  increaseQualityToMax50,
+  expireBackstagePass,
+} from './decreaseQualityToMin0'
 import { backstagePass, agedBrie, normal } from './itemTypes'
 
 export class GildedRose {
@@ -21,10 +26,6 @@ function handleNormalItem(item: Item) {
   decreaseQualityToMin0(item, expired(item) ? 2 : 1)
 }
 
-function decreaseQualityToMin0(item: Item, by = 1) {
-  item.quality = Math.max(0, item.quality - by)
-}
-
 function handleBrie(item: Item) {
   decreaseSellIn(item)
   increaseQualityToMax50(item, expired(item) ? 2 : 1)
@@ -42,18 +43,10 @@ function increaseBackstageQuality(item: Item) {
   else increaseQualityToMax50(item)
 }
 
-function expireBackstagePass(item: Item) {
-  item.quality = 0
-}
-
 function expired(item: Item) {
   return item.sellIn < 0
 }
 
 function decreaseSellIn(item: Item) {
   item.sellIn = item.sellIn - 1
-}
-
-function increaseQualityToMax50(item: Item, by = 1) {
-  item.quality = Math.min(50, item.quality + by)
 }
