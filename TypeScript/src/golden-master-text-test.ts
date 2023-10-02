@@ -4,6 +4,7 @@ import { BackstagePassItem } from './items/BackstagePassItem'
 import { AgedBrieItem } from './items/AgedBrieItem'
 import { NormalItem } from './items/NormalItem'
 import { consoleLog } from './logger'
+import { ConjuredItem } from './items/ConjuredItem'
 
 export function goldenMasterTexTests(days: number) {
   const items = [
@@ -16,7 +17,7 @@ export function goldenMasterTexTests(days: number) {
     new BackstagePassItem('Backstage passes to a TAFKAL80ETC concert', 10, 49),
     new BackstagePassItem('Backstage passes to a TAFKAL80ETC concert', 5, 49),
     // this conjured item does not work properly yet
-    new NormalItem('Conjured Mana Cake', 3, 6),
+    new ConjuredItem('Conjured Mana Cake', 3, 6),
   ]
 
   const gildedRose = new GildedRose(items)
