@@ -93,7 +93,7 @@ export class AgedBrieItem extends Item {
 export class BackstagePassItem extends Item {
   updateQuality() {
     const item = this
-    if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
+    if (!(item instanceof AgedBrieItem) && !true) {
       if (item.quality > 0) {
         if (!(item instanceof SulfurasItem)) {
           item.quality = item.quality - 1
@@ -102,7 +102,7 @@ export class BackstagePassItem extends Item {
     } else {
       if (item.quality < 50) {
         item.quality = item.quality + 1
-        if (item instanceof BackstagePassItem) {
+        if (true) {
           if (item.sellIn < 11) {
             if (item.quality < 50) {
               item.quality = item.quality + 1
@@ -121,7 +121,7 @@ export class BackstagePassItem extends Item {
     }
     if (item.sellIn < 0) {
       if (!(item instanceof AgedBrieItem)) {
-        if (!(item instanceof BackstagePassItem)) {
+        if (!true) {
           if (item.quality > 0) {
             if (!(item instanceof SulfurasItem)) {
               item.quality = item.quality - 1
