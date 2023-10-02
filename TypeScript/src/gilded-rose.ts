@@ -1,8 +1,8 @@
 import { Item } from './items/itemUtils/Item'
 import { backstagePass, agedBrie, normal } from './items/itemUtils/itemTypes'
-import { handleBackstagePass } from './itemHandlers/handleBackstagePass'
-import { handleBrie } from './itemHandlers/handleBrie'
-import { handleNormalItem } from './itemHandlers/handleNormalItem'
+import { handleBackstagePass } from './items/itemHandlers/handleBackstagePass'
+import { handleBrie } from './items/itemHandlers/handleBrie'
+import { handleNormalItem } from './items/itemHandlers/handleNormalItem'
 
 export class GildedRose {
   constructor(private items: Item[] = []) {}
