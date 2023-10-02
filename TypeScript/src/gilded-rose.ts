@@ -15,7 +15,7 @@ function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
 
-    if (!agedBrie(item) && !backstagePass(item) && !legendary(item)) {
+    if (normalItem(item)) {
       if (item.quality > 0) {
         item.quality = item.quality - 1
       }
