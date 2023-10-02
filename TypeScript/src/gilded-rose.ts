@@ -10,6 +10,10 @@ abstract class Item {
   protected decreaseSellIn() {
     this.sellIn = this.sellIn - 1
   }
+
+  protected increaseQualityToMax50() {
+    if (this.quality < 50) this.quality = this.quality + 1
+  }
 }
 
 export class NormalItem extends Item {
@@ -26,10 +30,6 @@ export class AgedBrieItem extends Item {
 
     this.decreaseSellIn()
     if (this.sellIn < 0 && this.quality < 50) this.quality = this.quality + 1
-  }
-
-  protected increaseQualityToMax50() {
-    if (this.quality < 50) this.quality = this.quality + 1
   }
 }
 
