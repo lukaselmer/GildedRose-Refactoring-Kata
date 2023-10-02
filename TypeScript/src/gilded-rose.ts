@@ -25,8 +25,8 @@ abstract class Item {
     this.sellIn = this.sellIn - 1
   }
 
-  protected increaseQualityToMax50() {
-    if (this.quality < 50) this.quality = this.quality + 1
+  protected increaseQualityToMax50(by = 1) {
+    if (this.quality < 50) this.quality = this.quality + by
   }
 
   protected get expired() {
