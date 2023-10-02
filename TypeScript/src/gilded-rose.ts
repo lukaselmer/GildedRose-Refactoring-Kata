@@ -65,14 +65,6 @@ function increaseQualityToMax50(item: Item, increaseBy = 1) {
   item.quality = Math.min(50, item.quality + increaseBy)
 }
 
-function increaseQuality(item: Item) {
-  item.quality = item.quality + 1
-}
-
-function decreaseQuality(item: Item) {
-  item.quality = item.quality - 1
-}
-
 function normal(item: Item) {
   return !special(item)
 }
