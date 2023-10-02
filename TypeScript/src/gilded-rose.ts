@@ -18,7 +18,13 @@ function updateQualityFn(items: Item[]) {
 function updateItemQuality(item: Item) {
   if (normal(item) && item.quality > 0) decreaseQuality(item)
 
-  if (agedBrie(item) || backstagePass(item)) {
+  if (agedBrie(item)) {
+    increaseQualityToMax50(item)
+    if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item)
+    if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item)
+  }
+
+  if (backstagePass(item)) {
     increaseQualityToMax50(item)
     if (backstagePass(item) && item.sellIn < 6) increaseQualityToMax50(item)
     if (backstagePass(item) && item.sellIn < 11) increaseQualityToMax50(item)
