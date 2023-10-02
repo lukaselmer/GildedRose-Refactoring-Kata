@@ -1,5 +1,5 @@
 import { beforeEach, beforeAll, describe, expect, it } from 'vitest'
-import { discardLogs, fakeLogs, initLogger } from './logger'
+import { discardLogs, fakeLogs, initLogger } from '../logger'
 import { extendedScenario, goldenMasterTexTests } from './items/scenarios/scenarios'
 
 beforeAll(() => initLogger('fake'))

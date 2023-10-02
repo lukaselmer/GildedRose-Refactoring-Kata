@@ -1,4 +1,4 @@
-import { goldenMasterTexTests } from './src/items/scenarios/scenarios'
+import { goldenMasterTexTests } from './src/functional/items/scenarios/scenarios'
 import { initLogger } from './src/logger'
 
 initLogger('real')

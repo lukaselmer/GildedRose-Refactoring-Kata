@@ -1,6 +1,6 @@
 import { GildedRose } from '../../gilded-rose'
 import { Item } from '../itemUtils/Item'
-import { consoleLog } from '../../logger'
+import { consoleLog } from '../../../logger'
 
 export function goldenMasterTexTests(days: number) {
   const items = [
