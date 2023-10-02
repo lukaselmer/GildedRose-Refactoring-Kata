@@ -51,11 +51,15 @@ function updateQualityFn(items: Item[]) {
         }
       } else {
         if (item.quality < 50) {
-          item.quality = item.quality + 1
+          increaseQuality(item)
         }
       }
     }
   }
+}
+
+function increaseQuality(item: Item) {
+  item.quality = item.quality + 1
 }
 
 function decreaseQuality(item: Item) {
