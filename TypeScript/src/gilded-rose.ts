@@ -26,20 +26,17 @@ export class AgedBrieItem extends Item {
 export class BackstagePassItem extends Item {
   updateQuality() {
     const item = this
-    if (false) {
-    } else {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1
-        if (true) {
-          if (item.sellIn < 11) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
+    if (item.quality < 50) {
+      item.quality = item.quality + 1
+      if (true) {
+        if (item.sellIn < 11) {
+          if (item.quality < 50) {
+            item.quality = item.quality + 1
           }
-          if (item.sellIn < 6) {
-            if (item.quality < 50) {
-              item.quality = item.quality + 1
-            }
+        }
+        if (item.sellIn < 6) {
+          if (item.quality < 50) {
+            item.quality = item.quality + 1
           }
         }
       }
