@@ -13,51 +13,47 @@ export class GildedRose {
 
 function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
-    updateItemQuality(items, i)
-  }
-}
+    const item = items[i]
 
-function updateItemQuality(items: Item[], i: number) {
-  const item = items[i]
+    if (normal(item) && item.quality > 0) decreaseQuality(item)
 
-  if (normal(item) && item.quality > 0) decreaseQuality(item)
-
-  if (agedBrie(item) || backstagePass(item)) {
-    if (item.quality < 50) {
-      increaseQuality(item)
-      if (backstagePass(item)) {
-        if (item.sellIn < 11) {
-          if (item.quality < 50) {
-            increaseQuality(item)
+    if (agedBrie(item) || backstagePass(item)) {
+      if (item.quality < 50) {
+        increaseQuality(item)
+        if (backstagePass(item)) {
+          if (item.sellIn < 11) {
+            if (item.quality < 50) {
+              increaseQuality(item)
+            }
           }
-        }
-        if (item.sellIn < 6) {
-          if (item.quality < 50) {
-            increaseQuality(item)
+          if (item.sellIn < 6) {
+            if (item.quality < 50) {
+              increaseQuality(item)
+            }
           }
         }
       }
     }
-  }
 
-  if (!legendary(item)) {
-    item.sellIn = item.sellIn - 1
-  }
+    if (!legendary(item)) {
+      item.sellIn = item.sellIn - 1
+    }
 
-  if (item.sellIn < 0) {
-    if (!agedBrie(item)) {
-      if (!backstagePass(item)) {
-        if (item.quality > 0) {
-          if (!legendary(item)) {
-            decreaseQuality(item)
+    if (item.sellIn < 0) {
+      if (!agedBrie(item)) {
+        if (!backstagePass(item)) {
+          if (item.quality > 0) {
+            if (!legendary(item)) {
+              decreaseQuality(item)
+            }
           }
+        } else {
+          item.quality = item.quality - item.quality
         }
       } else {
-        item.quality = item.quality - item.quality
-      }
-    } else {
-      if (item.quality < 50) {
-        increaseQuality(item)
+        if (item.quality < 50) {
+          increaseQuality(item)
+        }
       }
     }
   }
