@@ -19,14 +19,22 @@ function updateItemQuality(item: Item) {
   if (backstagePass(item)) {
     handleBackstagePass(item)
   } else if (agedBrie(item)) {
-    increaseQualityToMax50(item)
-    decreaseSellIn(item)
-    if (expired(item)) increaseQualityToMax50(item)
+    handleBrie(item)
   } else if (normal(item)) {
-    decreaseQualityToMin0(item)
-    decreaseSellIn(item)
-    if (expired(item)) decreaseQualityToMin0(item)
+    handleNormalItem(item)
   }
+}
+
+function handleNormalItem(item: Item) {
+  decreaseQualityToMin0(item)
+  decreaseSellIn(item)
+  if (expired(item)) decreaseQualityToMin0(item)
+}
+
+function handleBrie(item: Item) {
+  increaseQualityToMax50(item)
+  decreaseSellIn(item)
+  if (expired(item)) increaseQualityToMax50(item)
 }
 
 function handleBackstagePass(item: Item) {
