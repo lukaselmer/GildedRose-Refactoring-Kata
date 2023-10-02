@@ -26,7 +26,7 @@ abstract class Item {
   }
 
   protected increaseQualityToMax50(by = 1) {
-    if (this.quality < 50) this.quality = this.quality + by
+    this.quality = Math.min(50, this.quality + by)
   }
 
   protected get expired() {
