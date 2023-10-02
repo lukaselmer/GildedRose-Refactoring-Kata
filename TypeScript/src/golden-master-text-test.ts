@@ -1,4 +1,5 @@
-import { GildedRose, NormalItem, AgedBrieItem, SulfurasItem, BackstagePassItem } from './gilded-rose'
+import { GildedRose, AgedBrieItem, SulfurasItem, BackstagePassItem } from './gilded-rose'
+import { NormalItem } from './NormalItem'
 import { consoleLog } from './logger'
 
 export function goldenMasterTexTests(days: number) {

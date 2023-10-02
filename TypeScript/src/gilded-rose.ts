@@ -14,13 +14,6 @@ export class GildedRose {
   }
 }
 
-export class NormalItem extends Item {
-  updateQuality() {
-    this.decreaseSellIn()
-    this.decreaseQualityToMin0(this.expired ? 2 : 1)
-  }
-}
-
 export class AgedBrieItem extends Item {
   updateQuality() {
     this.decreaseSellIn()
