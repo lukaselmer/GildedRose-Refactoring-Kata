@@ -23,12 +23,12 @@ function updateQualityFn(items: Item[]) {
         if (backstagePass(item)) {
           if (item.sellIn < 11) {
             if (item.quality < 50) {
-              item.quality = item.quality + 1
+              increaseQuality(item)
             }
           }
           if (item.sellIn < 6) {
             if (item.quality < 50) {
-              item.quality = item.quality + 1
+              increaseQuality(item)
             }
           }
         }
