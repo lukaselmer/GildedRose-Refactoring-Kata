@@ -15,14 +15,15 @@ export class GildedRose {
 
   updateQuality() {
     for (let i = 0; i < this.items.length; i++) {
-      this.updateItemQuality(i)
+      const item = this.items[i]
+
+      this.updateItemQuality(item)
     }
 
     return this.items
   }
 
-  private updateItemQuality(i: number) {
-    const item = this.items[i]
+  private updateItemQuality(item: Item) {
     if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
       if (item.quality > 0) {
         if (!(item instanceof SulfurasItem)) {
