@@ -22,10 +22,8 @@ function updateItemQuality(item: Item) {
     if (item.quality < 50) {
       increaseQuality(item)
       if (backstagePass(item)) {
-        if (item.sellIn < 11) {
-          if (item.quality < 50) {
-            increaseQuality(item)
-          }
+        if (item.sellIn < 11 && item.quality < 50) {
+          increaseQuality(item)
         }
         if (item.sellIn < 6) {
           if (item.quality < 50) {
