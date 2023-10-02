@@ -35,6 +35,7 @@ function updateItemQuality(item: Item) {
         item.quality = item.quality - item.quality
       }
     }
+
     if (agedBrie(item)) {
       increaseQualityToMax50(item)
     }
