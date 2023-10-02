@@ -1,8 +1,9 @@
 import { Item } from './item/Item'
-import { decreaseQualityToMin0, increaseQualityToMax50 } from './item/quality'
+import { decreaseQualityToMin0 } from './item/quality'
 import { backstagePass, agedBrie, normal } from './item/itemTypes'
 import { decreaseSellIn, expired } from './item/sellIn'
 import { handleBackstagePass } from './handleBackstagePass'
+import { handleBrie } from './handleBrie'
 
 export class GildedRose {
   constructor(private items: Item[] = []) {}
@@ -22,9 +23,4 @@ function updateItemQuality(item: Item) {
 function handleNormalItem(item: Item) {
   decreaseSellIn(item)
   decreaseQualityToMin0(item, expired(item) ? 2 : 1)
-}
-
-function handleBrie(item: Item) {
-  decreaseSellIn(item)
-  increaseQualityToMax50(item, expired(item) ? 2 : 1)
 }
