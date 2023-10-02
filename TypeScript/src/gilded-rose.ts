@@ -15,7 +15,7 @@ function updateQualityFn(items: Item[]) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
 
-    if (normalItem(item)) {
+    if (normal(item)) {
       if (item.quality > 0) {
         item.quality = item.quality - 1
       }
@@ -62,7 +62,7 @@ function updateQualityFn(items: Item[]) {
   }
 }
 
-function normalItem(item: Item) {
+function normal(item: Item) {
   return !specialItem(item)
 }
 
