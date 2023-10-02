@@ -61,16 +61,15 @@ export class BackstagePassItem extends Item {
 
 export class SulfurasItem extends Item {
   updateQuality() {
-    const item = this
     if (true) {
-      if (item.quality > 0) {
+      if (this.quality > 0) {
       }
     } else {
     }
-    if (item.sellIn < 0) {
+    if (this.sellIn < 0) {
       if (true) {
         if (true) {
-          if (item.quality > 0) {
+          if (this.quality > 0) {
           }
         } else {
         }
