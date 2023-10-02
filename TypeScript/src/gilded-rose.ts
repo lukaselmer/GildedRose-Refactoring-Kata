@@ -21,13 +21,11 @@ function updateItemQuality(item: Item) {
   if (agedBrie(item) || backstagePass(item)) {
     if (true) {
       increaseQualityToMax50(item)
-      if (backstagePass(item)) {
-        if (item.sellIn < 11) {
-          increaseQualityToMax50(item)
-        }
-        if (item.sellIn < 6) {
-          increaseQualityToMax50(item)
-        }
+      if (backstagePass(item) && item.sellIn < 6) {
+        increaseQualityToMax50(item)
+      }
+      if (backstagePass(item) && item.sellIn < 11) {
+        increaseQualityToMax50(item)
       }
     }
   }
