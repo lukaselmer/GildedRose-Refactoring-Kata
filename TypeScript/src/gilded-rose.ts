@@ -26,6 +26,9 @@ function updateItemQuality(item: Item) {
 
   if (normal(item)) {
     decreaseQualityToMin0(item)
+    decreaseSellIn(item)
+    if (expired(item)) decreaseQualityToMin0(item)
+    return
   }
 
   if (agedBrie(item)) increaseQualityToMax50(item)
