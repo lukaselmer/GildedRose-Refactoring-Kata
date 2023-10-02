@@ -19,7 +19,7 @@ function updateQualityFn(items: Item[]) {
 
     if (agedBrie(item) || backstagePass(item)) {
       if (item.quality < 50) {
-        item.quality = item.quality + 1
+        increaseQuality(item)
         if (backstagePass(item)) {
           if (item.sellIn < 11) {
             if (item.quality < 50) {
