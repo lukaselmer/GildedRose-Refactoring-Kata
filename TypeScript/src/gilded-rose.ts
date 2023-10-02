@@ -43,7 +43,7 @@ function updateQualityFn(items: Item[]) {
         if (!backstagePass(item)) {
           if (item.quality > 0) {
             if (!legendary(item)) {
-              item.quality = item.quality - 1
+              decreaseQuality(item)
             }
           }
         } else {
