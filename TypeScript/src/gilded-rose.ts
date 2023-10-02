@@ -29,7 +29,7 @@ abstract class Item {
     if (this.quality < 50) this.quality = this.quality + 1
   }
 
-  protected expired() {
+  protected get expired() {
     return this.sellIn < 0
   }
 }
@@ -38,7 +38,7 @@ export class NormalItem extends Item {
   updateQuality() {
     this.decreaseQualityToMin0()
     this.decreaseSellIn()
-    if (this.expired() && this.quality > 0) this.quality = this.quality - 1
+    if (this.expired && this.quality > 0) this.quality = this.quality - 1
   }
 }
 
@@ -46,7 +46,7 @@ export class AgedBrieItem extends Item {
   updateQuality() {
     this.increaseQualityToMax50()
     this.decreaseSellIn()
-    if (this.expired()) this.increaseQualityToMax50()
+    if (this.expired) this.increaseQualityToMax50()
   }
 }
 
@@ -57,7 +57,7 @@ export class BackstagePassItem extends Item {
     if (this.sellIn < 6) this.increaseQualityToMax50()
 
     this.decreaseSellIn()
-    if (this.expired()) this.expire()
+    if (this.expired) this.expire()
   }
 
   private expire() {
