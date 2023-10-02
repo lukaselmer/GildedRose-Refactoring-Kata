@@ -44,7 +44,7 @@ export class GildedRose {
       }
       if (item.sellIn < 0) {
         if (item.name != 'Aged Brie') {
-          if (item.name != 'Backstage passes to a TAFKAL80ETC concert') {
+          if (!(item instanceof BackstagePassItem)) {
             if (item.quality > 0) {
               if (!(item instanceof SulfurasItem)) {
                 item.quality = item.quality - 1
