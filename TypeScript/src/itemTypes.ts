@@ -1,4 +1,4 @@
-import { Item } from './gilded-rose'
+import { Item } from './Item'
 
 export function normal(item: Item) {
   return !special(item)
