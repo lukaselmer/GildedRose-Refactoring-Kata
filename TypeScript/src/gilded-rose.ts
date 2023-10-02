@@ -27,9 +27,8 @@ export class NormalItem extends Item {
 export class AgedBrieItem extends Item {
   updateQuality() {
     this.increaseQualityToMax50()
-
     this.decreaseSellIn()
-    if (this.sellIn < 0 && this.quality < 50) this.quality = this.quality + 1
+    if (this.sellIn < 0 && this.quality < 50) this.increaseQualityToMax50()
   }
 }
 
