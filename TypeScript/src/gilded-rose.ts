@@ -1,3 +1,5 @@
+import { backstagePass, agedBrie, normal } from './backstagePass'
+
 export class Item {
   constructor(public name: string, public sellIn: number, public quality: number) {}
 }
@@ -61,24 +63,4 @@ function decreaseSellIn(item: Item) {
 
 function increaseQualityToMax50(item: Item, by = 1) {
   item.quality = Math.min(50, item.quality + by)
-}
-
-function normal(item: Item) {
-  return !special(item)
-}
-
-function special(item: Item) {
-  return agedBrie(item) || backstagePass(item) || legendary(item)
-}
-
-function backstagePass(item: Item) {
-  return item.name === 'Backstage passes to a TAFKAL80ETC concert'
-}
-
-function agedBrie(item: Item) {
-  return item.name === 'Aged Brie'
-}
-
-function legendary(item: Item) {
-  return item.name === 'Sulfuras, Hand of Ragnaros'
 }
