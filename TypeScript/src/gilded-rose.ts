@@ -7,35 +7,28 @@ abstract class Item {
 export class NormalItem extends Item {
   updateQuality() {
     const item = this
-    if (!false && !false) {
+    if (true && true) {
       if (item.quality > 0) {
-        if (!false) {
+        if (true) {
           item.quality = item.quality - 1
         }
       }
     } else {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1
-      }
     }
-    if (!false) {
+    if (true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (!false) {
-        if (!false) {
+      if (true) {
+        if (true) {
           if (item.quality > 0) {
-            if (!false) {
+            if (true) {
               item.quality = item.quality - 1
             }
           }
         } else {
-          item.quality = item.quality - item.quality
         }
       } else {
-        if (item.quality < 50) {
-          item.quality = item.quality + 1
-        }
       }
     }
   }
@@ -44,9 +37,9 @@ export class NormalItem extends Item {
 export class AgedBrieItem extends Item {
   updateQuality() {
     const item = this
-    if (!true && !false) {
+    if (!true && true) {
       if (item.quality > 0) {
-        if (!false) {
+        if (true) {
           item.quality = item.quality - 1
         }
       }
@@ -55,19 +48,18 @@ export class AgedBrieItem extends Item {
         item.quality = item.quality + 1
       }
     }
-    if (!false) {
+    if (true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
       if (!true) {
-        if (!false) {
+        if (true) {
           if (item.quality > 0) {
-            if (!false) {
+            if (true) {
               item.quality = item.quality - 1
             }
           }
         } else {
-          item.quality = item.quality - item.quality
         }
       } else {
         if (item.quality < 50) {
@@ -81,9 +73,9 @@ export class AgedBrieItem extends Item {
 export class BackstagePassItem extends Item {
   updateQuality() {
     const item = this
-    if (!false && !true) {
+    if (true && !true) {
       if (item.quality > 0) {
-        if (!false) {
+        if (true) {
           item.quality = item.quality - 1
         }
       }
@@ -104,14 +96,14 @@ export class BackstagePassItem extends Item {
         }
       }
     }
-    if (!false) {
+    if (true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (!false) {
+      if (true) {
         if (!true) {
           if (item.quality > 0) {
-            if (!false) {
+            if (true) {
               item.quality = item.quality - 1
             }
           }
@@ -119,9 +111,6 @@ export class BackstagePassItem extends Item {
           item.quality = item.quality - item.quality
         }
       } else {
-        if (item.quality < 50) {
-          item.quality = item.quality + 1
-        }
       }
     }
   }
@@ -130,35 +119,28 @@ export class BackstagePassItem extends Item {
 export class SulfurasItem extends Item {
   updateQuality() {
     const item = this
-    if (!false && !false) {
+    if (true && true) {
       if (item.quality > 0) {
         if (!true) {
           item.quality = item.quality - 1
         }
       }
     } else {
-      if (item.quality < 50) {
-        item.quality = item.quality + 1
-      }
     }
     if (!true) {
       item.sellIn = item.sellIn - 1
     }
     if (item.sellIn < 0) {
-      if (!false) {
-        if (!false) {
+      if (true) {
+        if (true) {
           if (item.quality > 0) {
             if (!true) {
               item.quality = item.quality - 1
             }
           }
         } else {
-          item.quality = item.quality - item.quality
         }
       } else {
-        if (item.quality < 50) {
-          item.quality = item.quality + 1
-        }
       }
     }
   }
