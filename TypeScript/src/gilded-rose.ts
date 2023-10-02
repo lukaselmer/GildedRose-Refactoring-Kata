@@ -20,7 +20,7 @@ function updateItemQuality(item: Item) {
   else if (normal(item)) handleNormalItem(item)
 }
 
-function handleNormalItem(item: Item) {
+function handleNormalItem(item: Item): void {
   decreaseSellIn(item)
   decreaseQualityToMin0(item, expired(item) ? 2 : 1)
 }
