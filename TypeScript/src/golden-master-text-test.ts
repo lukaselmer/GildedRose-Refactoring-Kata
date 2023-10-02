@@ -1,5 +1,5 @@
 import { GildedRose } from './gilded-rose'
-import { Item } from './Item'
+import { Item } from './item/Item'
 import { consoleLog } from './logger'
 
 export function goldenMasterTexTests(days: number) {

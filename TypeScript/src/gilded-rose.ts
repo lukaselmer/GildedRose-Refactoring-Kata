@@ -1,4 +1,4 @@
-import { Item } from './Item'
+import { Item } from './item/Item'
 import { decreaseQualityToMin0, increaseQualityToMax50, expire } from './item/quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
 import { decreaseSellIn, expired } from './item/sellIn'
