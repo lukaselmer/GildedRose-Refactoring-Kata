@@ -1,9 +1,5 @@
 import { Item } from './Item'
-import {
-  decreaseQualityToMin0,
-  increaseQualityToMax50,
-  expireBackstagePass,
-} from './decreaseQualityToMin0'
+import { decreaseQualityToMin0, increaseQualityToMax50, expireBackstagePass } from './quality'
 import { backstagePass, agedBrie, normal } from './itemTypes'
 
 export class GildedRose {
