@@ -14,9 +14,7 @@ export class NormalItem extends Item {
         }
       }
     }
-    if (true) {
-      item.sellIn = item.sellIn - 1
-    }
+    item.sellIn = item.sellIn - 1
     if (item.sellIn < 0) {
       if (true) {
         if (true) {
@@ -25,9 +23,7 @@ export class NormalItem extends Item {
               item.quality = item.quality - 1
             }
           }
-        } else {
         }
-      } else {
       }
     }
   }
