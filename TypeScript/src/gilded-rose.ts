@@ -13,7 +13,3 @@ export class GildedRose {
     item.updateQuality()
   }
 }
-
-export class SulfurasItem extends Item {
-  updateQuality() {}
-}

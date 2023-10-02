@@ -1,4 +1,5 @@
-import { GildedRose, SulfurasItem } from './gilded-rose'
+import { GildedRose } from './gilded-rose'
+import { SulfurasItem } from './SulfurasItem'
 import { BackstagePassItem } from './BackstagePassItem'
 import { AgedBrieItem } from './AgedBrieItem'
 import { NormalItem } from './NormalItem'
