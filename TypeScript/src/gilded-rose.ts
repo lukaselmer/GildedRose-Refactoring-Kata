@@ -54,7 +54,7 @@ export class BackstagePassItem extends Item {
   updateQuality() {
     if (this.expiringVerySoon) this.increaseQualityToMax50(1)
     if (this.expiringSoon) this.increaseQualityToMax50(1)
-    this.increaseQualityToMax50()
+    this.increaseQualityToMax50(1)
 
     this.decreaseSellIn()
     if (this.expired) this.expire()
