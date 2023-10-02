@@ -14,13 +14,6 @@ export class GildedRose {
   }
 }
 
-export class AgedBrieItem extends Item {
-  updateQuality() {
-    this.decreaseSellIn()
-    this.increaseQualityToMax50(this.expired ? 2 : 1)
-  }
-}
-
 export class BackstagePassItem extends Item {
   updateQuality() {
     if (this.expiringVerySoon) this.increaseQualityToMax50(3)
