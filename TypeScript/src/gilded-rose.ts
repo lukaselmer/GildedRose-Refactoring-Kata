@@ -16,10 +16,10 @@ function updateQualityFn(items: Item[]) {
 }
 
 function updateItemQuality(item: Item) {
+  if (!legendary(item)) decreaseSellIn(item)
   if (agedBrie(item)) increaseQualityToMax50(item)
   if (backstagePass(item)) increaseBackstageQuality(item)
 
-  if (!legendary(item)) decreaseSellIn(item)
   if (normal(item)) decreaseQualityToMin0(item)
 
   if (expired(item) && normal(item)) {
