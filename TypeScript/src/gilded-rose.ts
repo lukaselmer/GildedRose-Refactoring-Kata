@@ -7,7 +7,7 @@ abstract class Item {
 export class NormalItem extends Item {
   updateQuality() {
     const item = this
-    if (!(item instanceof AgedBrieItem) && !(item instanceof BackstagePassItem)) {
+    if (!false && !(item instanceof BackstagePassItem)) {
       if (item.quality > 0) {
         if (!(item instanceof SulfurasItem)) {
           item.quality = item.quality - 1
