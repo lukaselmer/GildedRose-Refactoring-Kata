@@ -26,7 +26,7 @@ export class AgedBrieItem extends Item {
 export class BackstagePassItem extends Item {
   updateQuality() {
     const item = this
-    if (true && false) {
+    if (false) {
     } else {
       if (item.quality < 50) {
         item.quality = item.quality + 1
